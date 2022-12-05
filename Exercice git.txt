@@ -1,0 +1,61 @@
+A faire en binôme (ou trinome) au sein d'une même équipe de projet
+
+1) Créer un git pour un projet Unity
+
+2) Tester les choses suivantes
+
+========== PARTIE 1 ==========
+
+	a) Créez chacun un fichier, faites un commit puis un push.
+	Il sera nécessaire pour une des personnes de d'abord faire un pull.
+
+	b) Faites de même en inversant les rôles.
+	
+	c) En reprennant le même principe, créez un fichier de script.
+	
+		1) Après que tout le monde ait récupéré le fichier, modifiez-le, une personne dans le Start et l'autre dans l'Update.
+
+		Envoyez vos modifications.
+
+		> Normalement, il ne devrait pas y avoir de problème particulier.
+
+		2) Maintenant, faites à nouveau des modifications mais sur la même ligne (accordez-vous sur la ligne à modifier)
+
+		Envoyez vos modifications.
+
+		> Normalement, la personne qui va envoyer ses modifications en second aura un message précisant qu'il y a un conflit sur un des fichiers du commit.
+		
+
+		###### Résolvez ce conflit ######
+			a. En choisissant le fichier à garder à l'aide de votre client git
+			b. En éditant le fichier en conflit à la main (ie: à l'aide d'un éditeur de texte)
+
+		3) Refaire en sens inverse pour que chacun ait pu tester le conflit
+
+
+	d) Faites le même test avec une image. Vous devriez observer que vous aurez forcément un conflit.
+
+	e) Etablissez un protocole de tests sur des manipulations de scènes et prefabs afin de pouvoir observer les scénarios qui peuvent créer des problèmes pendant la collaboration sur un projet.
+	Notez ce que vous testez et ce que vous observez ensuite.
+
+
+
+========== PARTIE 2 ==========
+
+	f) Pour cette partie, une des personnes du binôme créera une branche et l'autre continuera de travailler sur master.
+	Faites chacun quelques opérations (exemple: création d'une nouvelle scène, modification d'un prefab, ajout d'un nouvel objet dans une scène existante, etc)
+	Faites un commit pour chaque opération (et un push à chaque fois également).
+	Une fois les modifs effectuées, la personne travaillant sur la nouvelle branche devra merger son travail dans la branche Master.
+
+	réitérer l'opération en sens inverse pour que chacun ait testé le merge de branche.
+
+Commentaires :
+	--> vous pouvez utiliser les branches pour éviter de faire un commit quand vous mettez à jour le master !
+	Pour cela, il suffit de créer une branche et d'utiliser l'option "bring my changes". Ainsi, cela vous laisse un master "clean" sans pour autant perdre vos modifications qui se trouvent maintenant sur une branche séparée.
+
+	C'est une opération qui équivaut à git stash mais sans limite du nombre de fois que vous pouvez le faire.
+	Par ailleurs, vous n'êtes pas obligés d'envoyer ces branches sur un serveur, elles peuvent rester locales ! (particulièrement pertinent si elles sont crées de maniète temporaire)
+
+	Cela permet notamment de travailler directement sur master quand on fait beaucoup de mises à jour dans un temps court (gamejam par exemple).
+
+
