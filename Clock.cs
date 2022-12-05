@@ -24,6 +24,6 @@ public class Clock : MonoBehaviour
         MinutesPivot.localRotation = Quaternion.Euler(0, 0, MinutesToDegrees * (float)time.TotalMinutes);
         
         SecondsPivot.localRotation = Quaternion.Euler(0, 0, SecondsToDegrees * (float)time.TotalSeconds);
-        //titouan est trop cool//
+        //titouan est trop cool et sympa //
     }
 }
